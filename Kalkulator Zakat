@@ -1,0 +1,27 @@
+kalkulator_zakat.py
+print("===HITUNG ZAKAT ANDA===")
+tipe_zakat = input("Mau hitung zakat apa(emas,perak,uang)")
+#uang
+if tipe_zakat.lower() == "uang":
+    uang_anda = float(input("Berapa   uang anda?")) 
+    harga_uang = float(input("Berapa  harga perak sekarang?"))
+    if uang_anda >= 595 * harga_uang: 
+        zakat_uang = uang_anda / 40
+        print("Zakat anda: Rp",                      zakat_uang)
+    else: print("Ga Usah Bayar Zakat")
+#emas
+elif tipe_zakat.lower() == "emas":
+    emas_anda = float(input("Berapa gram emas yang anda punya?"))
+    if emas_anda < 85:
+        print("Ga usah bayar zakat")
+    else:
+        harga_emas = float(input("Berapa harga emas sekarang?"))
+        zakat_emas = emas_anda / 40 
+        print("Zakat anda:",zakat_emas,         "gr atau Rp",zakat_emas *                  harga_emas)
+elif tipe_zakat.lower() == "perak":
+    perak_anda = float(input("Berapa gram perak anda?"))
+    harga_perak = float(input("Berapa harga perak sekarang?"))
+    if perak_anda >= 595 :
+             zakat_perak = perak_anda / 40
+             print("Zakat anda:",zakat_perak,"gr atau Rp",zakat_perak * harga_perak)
+    else: print("Ga Usah Bayar Zakat")
